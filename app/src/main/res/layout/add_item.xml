@@ -101,4 +101,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <RadioGroup
+        android:id="@+id/lostOrFoundRadioGroup"
+        android:layout_width="153dp"
+        android:layout_height="104dp"
+        android:checkedButton="@id/lostRadioButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852">
+
+        <RadioButton
+            android:id="@+id/lostRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:checked="true"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:text="Lost Item"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/foundRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:text="Found Item"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

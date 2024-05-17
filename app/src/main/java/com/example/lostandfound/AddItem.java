@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,7 +34,7 @@ public class AddItem extends AppCompatActivity {
         EditText itemDate = findViewById(R.id.dateEditText);
         EditText itemLocation = findViewById(R.id.itemLocationEditText);
 
-        String name = itemNameEditText.getText().toString();
+        String name = lostOrFound() + itemNameEditText.getText().toString();
         String phoneNumber = phoneNumberEditText.getText().toString();
         String description = itemDescriptionEditText.getText().toString();
         String date = itemDate.getText().toString();
@@ -103,5 +105,22 @@ public class AddItem extends AppCompatActivity {
         //add 1
         int itemId = lastItem + 1;
         return String.valueOf(itemId);
+    }
+
+
+    //method for the lost or found radio group, this appends to the item name
+    public String lostOrFound() {
+        RadioButton lostRadioButton = findViewById(R.id.lostRadioButton);
+        RadioButton foundRadioButton = findViewById(R.id.foundRadioButton);
+
+        String lostOrFound = null;
+
+        if (lostRadioButton.isChecked()) {
+            lostOrFound = "Lost: ";
+        } else if (foundRadioButton.isChecked()) {
+            lostOrFound = "Found: ";
+        }
+
+        return lostOrFound;
     }
 }
