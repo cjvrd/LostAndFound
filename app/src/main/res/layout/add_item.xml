@@ -19,7 +19,8 @@
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672" />
+        app:layout_constraintVertical_bias="0.672"
+        android:onClick="startAutoCompleteIntent"/>
 
     <EditText
         android:id="@+id/itemNameEditText"
@@ -110,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.852">
+        app:layout_constraintVertical_bias="0.81">
 
         <RadioButton
             android:id="@+id/lostRadioButton"
@@ -131,5 +132,19 @@
             android:text="Found Item"
             android:textColor="#FFFFFF" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/getCurrentLocationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="GET CURRENT LOCATION"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906"
+        android:onClick="getCurrentLocationButtonClick"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
